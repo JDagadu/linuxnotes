@@ -110,9 +110,99 @@ linux is case has case sensitive commands
 * Not intuitive
 * Harder to learn than nano
 * Requires a time investment
+* *vi(m|ew)\* [filename]*
+* vi has a concept of modes
+    * command mode
+    * insert mode
+    * line mode
+### Graphical editors
+* emacs
+* gedit
+* gvim
+* kedit
+* AbiWord
+* Kate 
+* LibreOffice
+### Wildcards
+* a character or string used for pattern matching 
+* globbing expands the wildcard pattern into list of fikes and/or directories
+* wildcards can be used with most commands
+    * ls 
+    * rm 
+    * cp
+character class matches any of the characters included between the brackets. Matches exactly one character.
+[aeiou]
+ca[nt]*
+[!aeiou]
 
+### Input and Output
+* standard input stdin   0
+* standard output stdout 1
+* standard error stderr  2
 
+* \> redirects standard output to a file. Overwrites existing contents
+* \>> redirects standard output to a file. appends to any existing contents
+* Redirects input from a file to a command
+### Comparing the contents of files
+* diff file1 file2: compares two files
+* sdiff file1 file2 side-by-side comparison
+* vimdiff file1 file2 highlights differences in vim
+### searching in files
+* grep is used to search for a pattern in a file and display that pattern
+* -i : perform a search, ignoring case
+* -c: count the number of occurrences in a file
+* -n: precede output with the line numbers
+* -v: invert match. Print lines that don't match
+ #### file command 
+ displays file type
+ #### strings 
+ * displays printable strings in a binary file
+ #### cut command 
+ * cuts out selected portions of file. if file is ommitted use the standard input
+ * -d delimiter uses delimiter as the field separator
+ * -f N display the nth field
+ #### copy files over the network
+ * scp - secure copy 
+ * sftp - ssh file transfer protocol
+ * command line scp clients are 
+    * scp
+    * sftp
+    * putty secure copy client
+    * putty secure file transfer client
+* graphical clients
+    * cyberduck
+    * filezilla
+    * winscp
+#### customizing the shell prompt
+* use an environment variable to customize
+* Bash, ksh and sh use $PS1
+* to make your shell customizations persist between logins; echo 'export PS1="[\u@\h \w]\$" ' >> ~/.bash_profile
+#### aliases 
+* can be used to make shortcuts
+ * use for long commands 
+ * use for caommands you type often
+ #### environment variables
+* can change how an application behaves
+* an example environment variable : EDITOR = nano
+#### Processes and Jobs
+* ps is used to display process status
+#### Cron
+* cron is a timebased job scheduling service
+* crontab is a program to create, read, update, and delete your job schedules
+use cron to schedule and automate tasks
+    * \* minute
+    * \* hour
+    * \* day of the month
+    * \* month of year
+    * \* day of week
+#### switching user 
+* sudo is used to run commands as another user but its done as you being the root user
 
-
-
-
+### The Linux Boot Process
+##### BIOS
+* Basic Input/Output System
+* Special firmware
+* it's operating system independent
+* Primary purpose is to find and execute the boot loader
+* Performs the POST
+    * Power on self test
