@@ -461,3 +461,14 @@ use cron to schedule and automate tasks
 * it only affects the new files created after the setgid was added to the directory
 * sticky bit use on a directory to only allow the owner of the file/directory to delete it
 
+# Shell Scripting
+* Contain a series of commands.
+* An interpreter executes commands in the script.
+* Anything you can type at the command line,
+you can put in a script.
+* Great for automating tasks
+* Variable names can contain digits, letters, and underscore
+* They can start with letters or underscore but cannot start with digit
+
+
+
